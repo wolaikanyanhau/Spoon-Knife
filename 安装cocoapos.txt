@@ -1,0 +1,33 @@
+         使用cocoaPos的前提是电脑上安装过cocoaPos
+ 1. gem sources --remove https://rubygems.org/
+移除mac自带的ruby环境镜像
+
+2. gem sources -a https://ruby.taobao.org/
+添加成国内淘宝镜像
+
+3.  gem sources -l
+验证当前镜像到底是什么？
+
+4.  sudo gem install cocoapods 
+安装cocoapods的命令
+
+5.  pod search afnetworking
+搜索第三方库
+
+
+     使用cocoaPos
+1. 先在工程路径下, 建一个Podfile文件
+cd (后跟工程路径) , 切换到工程路径下
+ls, 查看路径下的资源目录
+touch Podfile, 生成podfile文件, Podfile文件作用, 就是用来加载你写进去的第三方
+2. pod search sdwebimage, 查找第三方
+在Podfile文件中, 引入先要加载的第三方命令, 比如:pod 'SDWebImage', '~> 3.7.5', 选择这个命令, 粘贴到Podfile文件, 然后关掉工程
+3. pod install, 下载第三方(执行该命令时, 必须在该工程路径下)
+//如果你运行pod update，后面没有跟库的名字，CocoaPods就会更新每一个Podfile里面的库到尽可能的最新版本。
+4.打开白色图标工程
+
+//使用cocoaPos导入头文件, 使用尖括号
+
+    //删除cocoaPos引入的第三方
+    //1.先在Podfile文件中删除引入的版本命令
+    //2.pod update, 在终端中更新cocoaPos
